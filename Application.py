@@ -1,0 +1,1 @@
+"""The Application module is responsible for the interaction with the user"""
