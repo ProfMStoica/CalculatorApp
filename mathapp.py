@@ -35,8 +35,11 @@ class MathApp:
         print("Which of the following artithmetic operations you would like to perform?")
         print("\t1. Addition")
         print("\t2. Subtraction")
-        print("TODO: add the rest of the operations")
-        #add the option for saving to memory
+        print("\t2. Multiplication")
+        print("\t2. Division")
+        print("\t2. Integer Division")
+        print("\t2. Remainder")
+        print("\t2. Solve Quadratic")
         print("\t8. Save to memory")
 
         #ask the user to select one of the options
