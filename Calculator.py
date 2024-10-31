@@ -22,23 +22,24 @@ class Calculator:
     #TODO: define the rest of the accessor and mutator methods
 
     def add(num1, num2):
-        pass
+        return num1 + num2
 
     def subtract(num1, num2):
-        pass
+        return num1 - num2
 
     def multiply(num1, num2):
-        pass
+        return num1 * num2
 
     def divide(num1, num2):
-        pass
+        return num1 / num2
 
     def intDivide(num1, num2):
-        pass
+        return num1 // num2
 
     def calcRemainder(num1, num2):
-        pass
+        return num1 % num2
     
     def  solveQuadratic(a, b, c):
+        #TODO: use the formula to determine the roots taking in consideration that it might not have a solution. 
         pass
 
