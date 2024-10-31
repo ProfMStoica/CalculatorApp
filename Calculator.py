@@ -2,17 +2,14 @@
 
 class Calculator:
     def __init__(self):
-        self._lastResult = 0.0
+        self._result = 0.0
         self._memOne = 0.0
         self._memTwo = 0.0
         self._memThree = 0.0
 
-    def getLastResult(self):
-        return self._lastResult
+    def getResult(self):
+        return self._result
     
-    def setLastResult(self, newLastResult):
-        self._lastResult = newLastResult
-
     def getMemoryOne(self):
         return self._memOne
     
@@ -21,25 +18,31 @@ class Calculator:
 
     #TODO: define the rest of the accessor and mutator methods
 
-    def add(num1, num2):
-        return num1 + num2
+    def add(self, num1, num2):
+        self._result = num1 + num2
+        return self._result;
 
-    def subtract(num1, num2):
-        return num1 - num2
+    def subtract(self, num1, num2):
+        self._result = num1 - num2
+        return self._result
 
-    def multiply(num1, num2):
-        return num1 * num2
+    def multiplyself(self, num1, num2):
+        self._result = num1 * num2
+        return self._result
 
-    def divide(num1, num2):
-        return num1 / num2
+    def divide(self, num1, num2):
+        self._result = num1 / num2
+        return self._result
 
-    def intDivide(num1, num2):
-        return num1 // num2
+    def intDivide(self, num1, num2):
+        self._result = num1 // num2
+        return self._result
 
-    def calcRemainder(num1, num2):
-        return num1 % num2
+    def calcRemainder(self, num1, num2):
+        self._result = num1 % num2
+        return self._result
     
-    def  solveQuadratic(a, b, c):
+    def  solveQuadratic(self, a, b, c):
         #TODO: use the formula to determine the roots taking in consideration that it might not have a solution. 
         pass
 
