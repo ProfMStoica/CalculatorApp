@@ -6,3 +6,39 @@ class Calculator:
         self._memOne = 0.0
         self._memTwo = 0.0
         self._memThree = 0.0
+
+    def getLastResult(self):
+        return self._lastResult
+    
+    def setLastResult(self, newLastResult):
+        self._lastResult = newLastResult
+
+    def getMemoryOne(self):
+        return self._memOne
+    
+    def setMemoryOne(self, newMemOne):
+        self._memOne = newMemOne
+
+    #TODO: define the rest of the accessor and mutator methods
+
+    def add(num1, num2):
+        pass
+
+    def subtract(num1, num2):
+        pass
+
+    def multiply(num1, num2):
+        pass
+
+    def divide(num1, num2):
+        pass
+
+    def intDivide(num1, num2):
+        pass
+
+    def calcRemainder(num1, num2):
+        pass
+    
+    def  solveQuadratic(a, b, c):
+        pass
+
