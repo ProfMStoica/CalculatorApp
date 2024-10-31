@@ -16,6 +16,17 @@ class Calculator:
     def setMemoryOne(self, newMemOne):
         self._memOne = newMemOne
 
+    def getMemoryTwo(self):
+        return self._memTwo
+    
+    def setMemoryTwo(self, newMemTwo):
+        self._memOne = newMemTwo
+
+    def getMemoryThree(self):
+        return self._memThree
+    
+    def setMemoryThree(self, newMemThree):
+        self._memOne = newMemThree        
     #TODO: define the rest of the accessor and mutator methods
 
     def add(self, num1, num2):
