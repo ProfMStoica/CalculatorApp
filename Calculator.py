@@ -46,3 +46,16 @@ class Calculator:
         #TODO: use the formula to determine the roots taking in consideration that it might not have a solution. 
         pass
 
+    def saveResult(self, memNo):
+        if memNo == 1:
+            self._memOne = self._result
+        elif memNo == 2:
+            self._memTwo = self._result
+        elif memNo == 3:
+            self._memThree = self.result
+        else:
+            #the memory number is incorrect
+            print("Incorrect memory number. The result was not saved")
+        
+
+
