@@ -20,7 +20,8 @@ class MathApp:
                 self.runMultiplication()
             elif userChoice == 4:
                 self.runDivision()
-            #TODO: implement the rest of the user choices
+            #TODO: implement the rest of the user choices for the rest of the arithmetic operation
+            #TODO: add an option to save the result of a calculation to memory
             elif userChoice == 0:
                 print("Thank you for using the Python Calculator. The application will now exit.")
             else:
@@ -41,6 +42,8 @@ class MathApp:
         return selection
 
     def runAddition(self):
+        #TODO: Modify the code to allow the use to type M1/M2/M3 to specify a memory location 
+        #which should then be used in the arithmetic operation
         #ask the user for the numbers to add
         num1 = float(input("Please enter the first number to add: "))
         num2 = float(input("Please enter the second number to add: "))
