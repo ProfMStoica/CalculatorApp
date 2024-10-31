@@ -20,8 +20,12 @@ class MathApp:
                 self.runMultiplication()
             elif userChoice == 4:
                 self.runDivision()
-            #TODO: implement the rest of the user choices for the rest of the arithmetic operation
-            #TODO: add an option to save the result of a calculation to memory
+            elif userChoice == 5:
+                self.runIntDivision()()
+            elif userChoice == 6:
+                self.runDivRemainder()()()
+            elif userChoice == 7:
+                self.runQuadratic()()
             elif userChoice == 8:
                 self.saveToMemory()
             elif userChoice == 0:
