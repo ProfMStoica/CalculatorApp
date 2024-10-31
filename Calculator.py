@@ -37,7 +37,7 @@ class Calculator:
         self._result = num1 - num2
         return self._result
 
-    def multiplyself(self, num1, num2):
+    def multiply(self, num1, num2):
         self._result = num1 * num2
         return self._result
 
@@ -46,7 +46,7 @@ class Calculator:
         return self._result
 
     def intDivide(self, num1, num2):
-        self._result = num1 // num2
+        self._result = int(num1) // int(num2)
         return self._result
 
     def calcRemainder(self, num1, num2):
@@ -63,7 +63,7 @@ class Calculator:
         elif memNo == 2:
             self._memTwo = self._result
         elif memNo == 3:
-            self._memThree = self.result
+            self._memThree = self._result
         else:
             #the memory number is incorrect
             print("Incorrect memory number. The result was not saved")
