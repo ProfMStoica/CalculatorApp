@@ -22,6 +22,8 @@ class MathApp:
                 self.runDivision()
             #TODO: implement the rest of the user choices for the rest of the arithmetic operation
             #TODO: add an option to save the result of a calculation to memory
+            elif userChoice == 8:
+                self.saveToMemory()
             elif userChoice == 0:
                 print("Thank you for using the Python Calculator. The application will now exit.")
             else:
@@ -33,7 +35,9 @@ class MathApp:
         print("Which of the following artithmetic operations you would like to perform?")
         print("\t1. Addition")
         print("\t2. Subtraction")
-        #TODO: add the rest of the operations
+        print("TODO: add the rest of the operations")
+        #add the option for saving to memory
+        print("\t8. Save to memory")
 
         #ask the user to select one of the options
         selection = int(input("Please enter your choice [1, 2, etc]. Enter zero to exit the program: "))
@@ -41,12 +45,30 @@ class MathApp:
         #return the option the user selected to the caller
         return selection
 
+    def resolveUserInput(self, userInput):
+        #check whether the user input is a memory location and determine which location it is
+        if userInput == "M1":
+            #the user specified a memory location 1 then extract its value and return it
+            return self._calc.getMemoryOne()
+        elif userInput == "M2":
+            #the user specified a memory location 2 then extract its value and return it
+            return self._calc.getMemoryTwo()
+        elif userInput == "M3":
+            #the user specified a memory location 3 then extract its value and return it
+            return self._calc.getMemoryThree()
+        else:
+             #the user specified a number then convert the input to number
+             return float(userInput)
+    
     def runAddition(self):
-        #TODO: Modify the code to allow the use to type M1/M2/M3 to specify a memory location 
         #which should then be used in the arithmetic operation
         #ask the user for the numbers to add
-        num1 = float(input("Please enter the first number to add: "))
-        num2 = float(input("Please enter the second number to add: "))
+        num1Input = input("Please enter the first number to add or a memory location (M1/M2/M3): ")
+        num2Input = input("Please enter the second number to add or a memory location (M1/M2/M3): ")
+
+        #determine the number input
+        num1 = self.resolveUserInput(num1Input)
+        num2 = self.resolveUserInput(num2Input)
 
         #perform the addition using the calculator object (stored in a field variable)
         self._calc.add(num1, num2)
@@ -55,8 +77,16 @@ class MathApp:
         print(f"{num1} + {num2} = {self._calc.getResult()}")
 
     def runSubtraction(self):
-        #TODO: implement interaction with user for subtraction
-        pass
+        #which should then be used in the arithmetic operation
+        #ask the user for the numbers to add
+        num1 = self.resolveUserInput(input("Please enter the first number to add or a memory location (M1/M2/M3): "))
+        num2 = self.resolveUserInput(input("Please enter the second number to add or a memory location (M1/M2/M3): "))
+
+        #perform the addition using the calculator object (stored in a field variable)
+        self._calc.subtract()(num1, num2)
+
+        #inform the user what the result of the addition is
+        print(f"{num1} - {num2} = {self._calc.getResult()}")
 
     def runMultiplication(self):
         #TODO: implement interaction with user for multiplication
@@ -82,3 +112,10 @@ class MathApp:
         #TODO: implement interaction with user for solving a quadratic equation
 
         pass
+
+    def saveToMemory(self):
+        #ask the user in which memory slot to save the result of the last calculation
+        memNo = int(input("{In what memory location would you like to store the result of the last calculation? [1, 2 or 3]"))
+        
+        #save the last result in the appropriate memory location
+        self._calc.saveResult(memNo)    
