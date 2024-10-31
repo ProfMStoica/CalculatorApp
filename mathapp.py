@@ -1,6 +1,11 @@
 """Defines the MathApp class responsible for user interaction"""
 
 from calculator import  Calculator
+
+# Practice object oriented programming with the following extensions:
+#   1. TODO: Add exponentiation to the program
+#   2. TODO: Expand the calculator memory slots by one (add M4)
+
 class MathApp:
     def __init__(self):
         self._calc = Calculator()
